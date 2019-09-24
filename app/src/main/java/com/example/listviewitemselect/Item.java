@@ -12,7 +12,7 @@ public class Item {
     public String getFlagName() {
         return flagName;
     }
-    
+
     public int getFlagImage() {
         return flagImage;
     }
