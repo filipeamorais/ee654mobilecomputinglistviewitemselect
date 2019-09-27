@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Data.put("USA", "The capital of USA is Washington, D.C.");
         Data.put("EU", "The capital of EU is Brussels");
         Data.put("India", "The capital of India is New Delhi");
-        Data.put("EU", "The capital of Germany is Berlin");
+        Data.put("Germany", "The capital of Germany is Berlin");
         Data.put("Korea", "The capital of Korea is Seoul");
-        Data.put("Korea", "The capital of France is Paris");
+        Data.put("France", "The capital of France is Paris");
 
         //defining a variable name for the ListView implemented on the main layout
         simpleList = (ListView) findViewById(R.id.simpleListView);
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                       Item item = (Item)simpleList.getItemAtPosition(position);
                                       Toast.makeText(getBaseContext(), item.getFlagName(), Toast.LENGTH_SHORT).show();
                                       try {
-                                          Intent intent = new Intent(MainActivity.this, EventLogTags.Description.class);
+                                          Intent intent = new Intent(MainActivity.this, Description.class);
                                           intent.putExtra(MESSAGE, Data.get(item.getFlagName()));
                                           startActivity(intent);
                                       } catch (Exception e) {/* Log error messages */}
@@ -62,8 +62,3 @@ public class MainActivity extends AppCompatActivity {
                               });  //end of setOnClickListener()
     }   // end of onCreate()
 }   // end of class MainActivity
-
-
-
-    }
-}
